@@ -1,0 +1,56 @@
+body { margin: 0; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+button:focus-visible, input:focus-visible, [role="tabpanel"]:focus-visible {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 3px;
+}
+
+.playground { max-width: 1100px; margin: 0 auto; padding: 64px 24px 100px; }
+.page-header { max-width: 720px; margin-bottom: 72px; }
+.eyebrow { color: #155e75; font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+h1 { margin: 12px 0 18px; font-size: clamp(2.3rem, 5vw, 4.5rem); letter-spacing: -.055em; line-height: 1.05; }
+.page-header > p:last-child, .section-heading > p:last-child { color: #475569; line-height: 1.6; }
+.component-section { margin-top: 48px; }
+.section-heading { margin-bottom: 22px; }
+.section-heading h2 { margin: 8px 0; font-size: 1.8rem; letter-spacing: -.03em; }
+.component-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: stretch; }
+.component-card { min-width: 0; padding: 25px; border: 1px solid #cbd5e1; border-radius: 18px; background: #fff; box-shadow: 0 10px 30px rgba(15, 23, 42, .04); }
+.component-card h3 { font-size: 1.2rem; font-weight: 650; margin: 0 0 8px; }
+.component-card > p { min-height: 75px; margin: 0 0 25px; color: #475569; font-size: .94rem; line-height: 1.5; }
+.component-card > button, .modal-actions button { background: #0f172a; color: #fff; padding: 10px 15px; border: 1px solid #0f172a; border-radius: 9px; }
+.component-card > button:hover, .modal-actions button:hover { background: #334155; }
+.comparison { border-top: 1px solid #cbd5e1; padding-top: 35px; margin-top: 70px; }
+.comparison-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.comparison-grid .component-card { min-height: 190px; }
+.comparison-grid .component-card h3 { margin-bottom: 25px; }
+.comparison-input { border: 1px solid #94a3b8; border-radius: 8px; padding: 8px 10px; }
+
+.handmade-tabs [role="tablist"] { display: flex; gap: 5px; border-bottom: 1px solid #cbd5e1; }
+.handmade-tabs [role="tab"] { padding: 9px 8px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: #475569; font-size: .82rem; font-weight: 600; }
+.handmade-tabs [role="tab"][aria-selected="true"] { color: #0f172a; border-bottom-color: #0e7490; }
+.handmade-tabs [role="tabpanel"] { padding: 17px 4px; color: #334155; font-size: .91rem; line-height: 1.5; }
+.handmade-tabs [role="tabpanel"][hidden] { display: none; }
+
+.disclosure button { display: flex; align-items: center; gap: 9px; width: 100%; padding: 11px 12px; border: 1px solid #94a3b8; border-radius: 9px; background: #f8fafc; text-align: left; font-weight: 600; }
+.disclosure button span { color: #0e7490; font-size: 1.2rem; line-height: 1; }
+.disclosure > div { padding: 15px 12px; color: #334155; font-size: .92rem; line-height: 1.5; }
+.disclosure > div[hidden] { display: none; }
+
+.modal-backdrop { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 18px; background: rgba(15, 23, 42, .65); }
+.modal-panel { width: min(100%, 490px); padding: 24px; border-radius: 18px; background: #fff; box-shadow: 0 20px 60px rgba(0, 0, 0, .25); }
+.modal-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
+.modal-heading h3 { margin: 0 0 7px; font-size: 1.3rem; font-weight: 700; }
+.modal-heading p { margin: 0; color: #475569; font-size: .94rem; }
+.modal-heading button { width: 34px; height: 34px; border: 1px solid #cbd5e1; border-radius: 8px; background: #f8fafc; font-size: 1.4rem; line-height: 1; }
+.modal-body { display: grid; gap: 7px; margin: 25px 0; }
+.modal-body label { font-size: .9rem; font-weight: 600; }
+.modal-body input { width: 100%; padding: 9px 11px; border: 1px solid #94a3b8; border-radius: 8px; }
+.modal-actions { display: flex; justify-content: flex-end; }
+
+@media (max-width: 850px) {
+  .component-grid, .comparison-grid { grid-template-columns: 1fr; }
+  .component-card > p { min-height: 0; }
+  .playground { padding-top: 38px; }
+  .page-header { margin-bottom: 45px; }
+}
